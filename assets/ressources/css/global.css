@@ -7140,7 +7140,7 @@ footer h3 {
 }
 
 .parallax-1 {
-  background: url("../img/bandeau/parallax.jpg")fixed no-repeat center !important;
+  background: url("../../img/parallax.jpg")fixed no-repeat center !important;
   background-size: cover !important;
 }
 
