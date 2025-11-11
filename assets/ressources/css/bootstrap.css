@@ -2027,6 +2027,12 @@ label {
   margin-bottom: 60px
 }
 
+@media only screen and (max-width:992px) {
+  .benefits {
+    margin-bottom: 20px;
+  }
+}
+
 .benefits .ico {
   background: #ff5800;
   width: 80px;
@@ -2036,6 +2042,15 @@ label {
   display: inline-block;
   float: none;
   position: relative
+}
+
+@media only screen and (max-width:992px) {
+  .benefits .ico {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (min-width:992px) {
@@ -2060,6 +2075,25 @@ label {
 
 .benefits .texte h3 {
   margin-top: 0
+}
+
+@media only screen and (max-width:992px) {
+  .benefits .texte {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .buttondevis{
+    text-align: center !important;
+  }
+  
+  .benefits .texte h3 {
+    text-align: center;
+  }
+
+  .benefits .texte p {
+    text-align: center;
+  }
 }
 
 .contact-info {

@@ -7116,7 +7116,13 @@ footer h3 {
 
 .owl-carousel .owl-item img {
   width: auto !important;
+  object-fit: cover;
 }
+}
+
+.parallax-2 {
+  background: url(../../img/2.jpg) fixed no-repeat center !important;
+  background-size: cover !important;
 }
 
 .grecaptcha-badge {
