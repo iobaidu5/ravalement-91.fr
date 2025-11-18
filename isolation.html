@@ -215,6 +215,49 @@
   </div>
   </header>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const current = window.location.pathname
+      .replace(/\/+$/, "")
+      .split("/")
+      .pop();
+
+    const menuLinks = document.querySelectorAll(".menu-top a");
+    const dropdownParent = document.querySelector(".menu-top .dropdown > a");
+    const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+
+    let childMatched = false;
+
+    dropdownLinks.forEach(link => {
+      let href = link.getAttribute("href") || "";
+      href = href.replace(/\/+$/, "").split("/").pop();
+
+      if (href === current) {
+        link.classList.add("active");
+        childMatched = true;
+      }
+    });
+
+    // If child matched, also activate parent
+    if (childMatched && dropdownParent) {
+      dropdownParent.classList.add("active");
+    }
+
+    // Handle all other top menu links normally
+    menuLinks.forEach(link => {
+      const href = link.getAttribute("href") || "";
+      if (!href || href === "#") return;
+
+      const cleanHref = href.replace(/\/+$/, "").split("/").pop();
+
+      if (cleanHref === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
   
 
 
